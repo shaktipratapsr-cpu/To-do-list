@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+  color: #222;
+}
+
+nav {
+  background: linear-gradient(90deg, #6366f1 0%, #4338ca 100%);
+  padding: 16px 32px;
+  box-shadow: 0 2px 8px rgba(67, 56, 202, 0.08);
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+nav ul li a:hover {
+  background: #818cf8;
+  color: #f8fafc;
+}
+hr {
+  margin: 24px 0;
+  border: 0;
+  border-top: 2px solid #6366f1;
+}
+
+.container {
+  margin: 32px auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(67, 56, 202, 0.08);
+  padding: 32px 24px;
+}
+
+.card {
+  background: #f3f4f6;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(67, 56, 202, 0.06);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #c7d2fe;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: border 0.2s;
+}
+input[type="text"]:focus, textarea:focus {
+  border-color: #6366f1;
+  outline: none;
+}
+
+button {
+  background: linear-gradient(90deg, #6366f1 0%, #4338ca 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(67, 56, 202, 0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+button:hover {
+  background: #818cf8;
+  transform: translateY(-2px) scale(1.03);
+}

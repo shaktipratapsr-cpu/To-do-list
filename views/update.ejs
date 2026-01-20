@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Task</title>
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+<body>
+  <%- include('navbar')%>
+  <h1>Update Task</h1>
+  <div class="container">
+    <% if (typeof error !== 'undefined' && error) { %>
+      <div style="color: #dc2626; margin-bottom: 12px;"><%= error %></div>
+    <% } %>
+    <div class="card">
+      <h2>Select a Task to Update</h2>
+      <ul style="list-style:none; padding:0;">
+        <% if (tasks && tasks.length > 0) { %>
+          <% tasks.forEach(t => { %>
+            <li style="margin-bottom:8px;">
+              <a href="/update/<%= t._id %>" style="color:#6366f1; text-decoration:underline; font-weight:500;">
+                <%= t.title %>
+              </a>
+            </li>
+          <% }) %>
+        <% } else { %>
+          <li>No tasks found.</li>
+        <% } %>
+      </ul>
+    </div>
+    <% if (task) { %>
+      <div class="card">
+        <h2>Edit Task</h2>
+        <form action="/update/<%= task._id %>" method="POST">
+          <input type="text" name="title" value="<%= task.title %>" required>
+          <textarea name="description"><%= task.description %></textarea>
+          <button type="submit">Update Task</button>
+        </form>
+      </div>
+    <% } %>
+  </div>
+</body>
+</html>
